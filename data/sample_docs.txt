@@ -1,0 +1,249 @@
+XYZ Enterprises - Synthetic Internal Dataset
+
+================================================================================
+1. Company Overview
+================================================================================
+
+Document ID: XYZ-OVR-001
+Title: Company Overview
+
+XYZ Enterprises is a global technology and consulting firm focused on cloud infrastructure, AI-driven analytics, and enterprise software solutions.
+
+Locations: India, Germany, USA
+Employees: ~3,500
+
+Departments:
+- Engineering
+- Data & AI
+- Human Resources
+- Finance
+- IT Operations
+- Customer Success
+
+Founded in 2010, XYZ Enterprises has grown from a 20-person startup to a multinational firm serving Fortune 500 clients. The company's headquarters are in Bangalore, India, with regional offices in Berlin and San Francisco.
+
+Vision: To empower every organization with intelligent, scalable technology.
+Mission: Deliver reliable, innovative software solutions that create measurable business value.
+
+Key Products:
+- XYZ CloudOps: Infrastructure automation platform
+- XYZ Insight: Real-time analytics and BI dashboard suite
+- XYZ SecureGate: Enterprise identity and access management
+
+================================================================================
+2. Leave Policy
+================================================================================
+
+Document ID: XYZ-HR-LEAVE-002
+Title: Employee Leave Policy
+
+Effective Date: January 1, 2024
+Applicable To: All full-time employees
+
+Annual Leave Entitlements:
+- Casual Leave: 12 days per year
+- Sick Leave: 12 days per year
+- Earned Leave: 18 days per year (accrues at 1.5 days/month)
+- Maternity Leave: 26 weeks (as per Maternity Benefit Act)
+- Paternity Leave: 5 days
+- Bereavement Leave: 3 days per incident
+
+Leave Carry Forward:
+- Earned Leave: Up to 30 days can be carried forward
+- Casual and Sick Leave: Cannot be carried forward
+
+Leave Application Process:
+1. Login to HRMS portal at hrms.xyzenterprises.com
+2. Navigate to Leave Management > Apply Leave
+3. Select leave type, date range, and provide reason
+4. Submit for manager approval
+
+Approval SLA:
+- Casual / Earned Leave: Manager must approve within 2 business days
+- Medical Leave (>3 days): Requires HR approval and medical certificate
+
+Leave Encashment:
+- Earned leave beyond 30 days is eligible for encashment at year-end
+- Encashment value = (Basic Salary / 26) x Number of leave days encashed
+
+Leave Without Pay (LWP):
+- Employees who exhaust all leave balances may apply for LWP
+- LWP requires VP-level approval
+- LWP impacts monthly payroll deductions
+
+================================================================================
+3. Performance Review Process
+================================================================================
+
+Document ID: XYZ-HR-PERF-003
+Title: Annual Performance Review Guidelines
+
+Review Cycle: January - December (annual)
+Mid-year Check-in: July
+
+Rating Scale:
+- 5 - Exceptional: Consistently exceeds all goals
+- 4 - Exceeds Expectations: Frequently surpasses targets
+- 3 - Meets Expectations: Reliably delivers on goals
+- 2 - Needs Improvement: Partially meets expectations
+- 1 - Unsatisfactory: Fails to meet core expectations
+
+Process:
+1. Self-Assessment (Employee) — Due: January 15
+2. Manager Assessment — Due: January 31
+3. Calibration meeting (Senior Management) — February
+4. Rating Communication to employees — March 1
+5. Increment letters issued — March 15
+
+Goal Setting:
+- Goals must follow the SMART framework
+- Each employee sets 4-6 goals aligned with department OKRs
+- Goals are entered in HRMS under Performance > Goal Setting
+
+Increment Guidelines (based on ratings):
+- Rating 5: 15-20% increment
+- Rating 4: 10-14% increment
+- Rating 3: 5-9% increment
+- Rating 2: 0-4% increment
+- Rating 1: No increment; Performance Improvement Plan (PIP) initiated
+
+================================================================================
+4. System Access Policy
+================================================================================
+
+Document ID: XYZ-IT-ACCESS-004
+Title: System Access Policy
+
+Purpose: Define access levels and approval workflows for XYZ internal systems.
+
+Role Access Level Table:
+| Role               | Access Level | Key Responsibilities                     |
+|--------------------|--------------|------------------------------------------|
+| Data Analyst       | Level 1      | Reporting, dashboards                    |
+| Data Scientist     | Level 2      | Modeling, experimentation                |
+| Software Engineer  | Level 2      | Backend systems, APIs                    |
+| Tech Lead          | Level 3      | Architecture decisions                   |
+| HR Executive       | Level 1      | Employee operations                      |
+| IT Admin           | Level 3      | Infrastructure, security                 |
+
+Access Levels:
+- Level 1: Email, HRMS, dashboards
+- Level 2: Database read/write, analytics tools
+- Level 3: Production systems, deployment pipelines
+
+Approval Flow:
+- Level 1 → Auto-approved
+- Level 2 → Manager approval
+- Level 3 → Security team + CTO approval
+
+Requesting Access:
+To request access to databases or production systems, submit a request via the IT portal (Document ID: XYZ-IT-FAQ-009). Requests are reviewed within 1 business day for Level 1-2 and 3 business days for Level 3.
+
+Revoking Access:
+If access is no longer needed (role change, offboarding), raise an incident ticket. Access is revoked within 24 hours of ticket resolution.
+
+Password Policy:
+- Minimum 12 characters
+- Must include uppercase, lowercase, number, and special character
+- Passwords expire every 90 days
+- Multi-factor authentication (MFA) is mandatory for Level 2 and above
+
+================================================================================
+5. IT Issue Logs
+================================================================================
+
+Document ID: XYZ-IT-ISSUE-005
+Title: Common IT Issues and Resolutions
+
+Issue #1: VPN Connection Failure
+Symptoms: Unable to connect to corporate VPN; error "Authentication Failed"
+Resolution:
+1. Verify your MFA app is synced (check time settings)
+2. Re-enter credentials; ensure Caps Lock is off
+3. If issue persists, reset VPN credentials via IT Portal > Reset VPN Password
+Escalation: If unresolved after 30 minutes, contact ithelp@xyzenterprises.com
+
+Issue #2: HRMS Login Error
+Symptoms: "Account Locked" message after multiple failed attempts
+Resolution:
+1. Wait 15 minutes for auto-unlock
+2. Use "Forgot Password" link on login page
+3. Contact IT Help Desk with your employee ID for manual unlock
+
+Issue #3: Slow System Performance
+Symptoms: Applications taking > 10 seconds to load, high CPU usage
+Resolution:
+1. Restart your machine
+2. Close unused applications and browser tabs
+3. Run Disk Cleanup (Windows) or Optimize Storage (Mac)
+4. Submit a hardware review ticket if issue recurs weekly
+
+Issue #4: Email Delivery Failure
+Symptoms: Emails not reaching external recipients
+Resolution:
+1. Check recipient email address for typos
+2. Verify attachment size is under 25MB
+3. Whitelist request: Submit to IT Portal if a domain is being blocked
+
+================================================================================
+6. Internal Communication
+================================================================================
+
+Document ID: XYZ-COMM-010
+Subject: Discrepancy in Leave Balance
+
+From: Priya Sharma (priya.sharma@xyzenterprises.com)
+To: hr-helpdesk@xyzenterprises.com
+Date: April 10, 2024
+
+Hi HR Team,
+
+I noticed a discrepancy in my leave balance on the HRMS portal. According to my records, I took 4 days of casual leave in Q1 2024, but the portal shows 6 days deducted.
+
+Could you please review and correct this at the earliest? I am planning to apply for earned leave next week and would like accurate balances before doing so.
+
+Employee ID: EMP-20210345
+Manager: Rajesh Kumar
+
+Regards,
+Priya Sharma
+Senior Data Analyst, Data & AI Team
+
+---
+HR Response:
+Thank you for reaching out, Priya. We have reviewed your leave records and identified that 2 days were incorrectly tagged as Casual Leave instead of Work From Home (WFH) on April 2-3. The HRMS balance has been corrected. Your current Casual Leave balance is 8 days. Apologies for the inconvenience.
+
+================================================================================
+7. Expense Reimbursement Policy
+================================================================================
+
+Document ID: XYZ-FIN-EXP-007
+Title: Employee Expense Reimbursement Policy
+
+Eligible Expenses:
+- Business travel (flights, hotels, local transport)
+- Client entertainment (with manager approval, up to INR 5,000/event)
+- Conference/training registration fees
+- Internet allowance (INR 1,500/month for WFH employees)
+
+Ineligible Expenses:
+- Personal meals (unless traveling)
+- Traffic fines or parking violations
+- Alcohol (not reimbursable under any circumstances)
+- Personal subscriptions
+
+Submission Process:
+1. Collect original receipts for all expenses
+2. Log into Finance Portal at finance.xyzenterprises.com
+3. Navigate to Expenses > New Claim
+4. Upload receipts and fill in expense details
+5. Submit by the 5th of the following month
+
+Approval and Payment:
+- Claims up to INR 10,000: Auto-approved with manager notification
+- Claims INR 10,001 - 50,000: Manager approval required
+- Claims above INR 50,000: Finance Head approval required
+- Approved claims are processed in the next payroll cycle
+
+Travel Advance:
+Employees can request a travel advance up to 80% of estimated travel cost. Advances must be settled within 7 days of return.
