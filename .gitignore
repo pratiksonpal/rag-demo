@@ -28,6 +28,9 @@ build/
 .env
 .env.*
 
+# Pytest
+.pytest_cache/
+
 # OS
 .DS_Store
 Thumbs.db
