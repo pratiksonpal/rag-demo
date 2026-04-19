@@ -6,19 +6,19 @@ An interactive, educational RAG demo that visualizes every step of the pipeline.
 
 | Tab | RAG Step | What you see |
 |-----|----------|--------------|
-| ① Text Splitting | Pre-processing | Documents split into color-coded chunks |
-| ⊕ Vector Embedding | **R**etrieval | 2D PCA scatter of embeddings + FAISS search |
-| 💬 Response Generation | **A**ugment + **G**enerate | Prompt preview with context · Streamed LLM response |
+| ① Text Splitting | Pre-processing | 6 chunking strategies; color-coded chunk boundaries |
+| ② Vector Embedding | **R**etrieval | 2D PCA scatter of embeddings + FAISS similarity search |
+| ③ Response Generation | **A**ugment + **G**enerate | Prompt preview with context · Streamed LLM response |
 
 ## Stack
 
 | Layer | Tool |
 |---|---|
 | UI | Streamlit |
-| Chunking | LangChain text splitters (Fixed / Recursive / Parent-Child) |
+| Chunking | LangChain text splitters (Fixed / Recursive / Parent-Child / Token / Markdown / Python) |
 | Embeddings | `sentence-transformers` — `all-MiniLM-L6-v2` (50MB, CPU) |
 | Vector DB | FAISS (`IndexFlatIP` — cosine similarity) |
-| LLM | Ollama (local) — `llama3.2:3b` default |
+| LLM | Ollama (local) — `tinyllama:latest` default |
 | Visualization | Plotly + scikit-learn PCA |
 
 All open-source. No paid APIs. Runs fully offline after setup.
@@ -36,15 +36,17 @@ pip install -r requirements.txt
 ```bash
 # Install from https://ollama.com
 ollama serve
-ollama pull llama3.2:3b   # ~2GB — fast and capable
+ollama pull tinyllama      # ~637MB — default model used by the app
 # or
-ollama pull llama3.2:1b   # ~800MB — lightest option
+ollama pull llama3.2:3b   # ~2GB — better quality
 ```
 
 ### 3. Run the app
 
 ```bash
 streamlit run app.py
+# if the above doesn't work
+python -m streamlit run app.py
 ```
 
 ## Usage
@@ -64,9 +66,9 @@ thirdProject-Rag/
 ├── data/
 │   └── sample_docs.txt # XYZ Enterprises synthetic dataset
 ├── src/
-│   ├── chunker.py      # Fixed / Recursive / Parent-Child splitting
+│   ├── chunker.py      # 6 strategies: Fixed / Recursive / Parent-Child / Token / Markdown / Python
 │   ├── embedder.py     # sentence-transformers + FAISS index builder
 │   ├── retriever.py    # FAISS cosine similarity search
-│   └── generator.py    # Ollama streaming inference
-└── resources/          # Reference screenshots
+│   ├── generator.py    # Ollama streaming inference
+│   └── logger.py       # Centralised logging (writes to logs/)
 ```
