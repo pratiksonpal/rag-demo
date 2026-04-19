@@ -25,6 +25,14 @@ Interactive, educational RAG demo that visualizes every step of the pipeline via
 - **Orchestration**: plain Python + Streamlit (no LangChain orchestration layer)
 - **Text splitting**: LangChain text splitters (`langchain-text-splitters`)
 
+## Testing
+- **Unit tests** (66): `python -m pytest` → `tests/report.html`
+  - Covers: chunker (all 6 strategies), embedder, retriever, generator (mocked Ollama), logger
+- **UI tests** (32): `python -m pytest -c pytest-ui.ini` → `tests/ui_report.html`
+  - Covers: page load, sidebar, tab navigation, Tab 1 interactions, Tab 2 & Tab 3 element presence
+  - Requires Playwright Chromium: `python -m playwright install chromium`
+  - Starts Streamlit on port 8502 as a subprocess; Ollama not required for UI tests
+
 ## Environment
 - Python 3.x
 - Ollama must be running locally (`ollama serve`) with at least one model pulled

@@ -57,12 +57,33 @@ python -m streamlit run app.py
 
 3. **Tab 3 — Response Generation**: Enter a question. The left panel shows the full prompt (system message + retrieved context chunks). Click **Generate Response** to stream the LLM's answer.
 
+## Testing
+
+### Unit tests (66 tests — no server required)
+
+```bash
+python -m pytest
+# report → tests/report.html
+```
+
+### UI tests (32 tests — requires Streamlit + Chromium)
+
+```bash
+# First-time setup: install Chromium for Playwright
+python -m playwright install chromium
+
+python -m pytest -c pytest-ui.ini
+# report → tests/ui_report.html
+```
+
 ## Project Structure
 
 ```
 thirdProject-Rag/
 ├── app.py              # Streamlit app (3 tabs)
 ├── requirements.txt
+├── pytest.ini          # Unit test config
+├── pytest-ui.ini       # UI test config
 ├── data/
 │   └── sample_docs.txt # XYZ Enterprises synthetic dataset
 ├── src/
@@ -71,4 +92,15 @@ thirdProject-Rag/
 │   ├── retriever.py    # FAISS cosine similarity search
 │   ├── generator.py    # Ollama streaming inference
 │   └── logger.py       # Centralised logging (writes to logs/)
+└── tests/
+    ├── report.html         # Unit test execution report
+    ├── test_chunker.py
+    ├── test_embedder.py
+    ├── test_retriever.py
+    ├── test_generator.py
+    ├── test_logger.py
+    └── ui/
+        ├── ui_report.html  # UI test execution report
+        ├── conftest.py     # Streamlit server + Playwright fixtures
+        └── test_ui.py      # 32 UI tests (Playwright + headless Chromium)
 ```

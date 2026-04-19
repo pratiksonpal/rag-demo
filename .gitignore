@@ -28,8 +28,9 @@ build/
 .env
 .env.*
 
-# Pytest
+# Pytest / Playwright
 .pytest_cache/
+tests/ui/screenshots/
 
 # OS
 .DS_Store
